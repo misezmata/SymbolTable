@@ -9,7 +9,12 @@ public:
         currentTable->uniqueId = "1"; 
     }
     ~SymbolTable(){
-        delete currentTable;
+        ScopeTable* cur = currentTable;
+        while(cur != nullptr){
+            ScopeTable* parent = cur->parent;
+            delete cur;
+            cur = parent;
+        }
     }
     void enterScope(){
         ScopeTable* newTable;
