@@ -43,7 +43,7 @@ class ScopeTable{
             return true;
         }
         SymbolInfo* parent = hash_table[hash];
-        SymbolInfo* child = child->next;
+        SymbolInfo* child = parent->next;
         int count = 1;
         while(child != nullptr){
             if(child == s){
@@ -92,7 +92,6 @@ public:
         }
         delete []hash_table;
     }
-    
     int hashFun(string s){
         unsigned long hash_value = hash_sdbm(s);
         hash_value %= size;
@@ -101,8 +100,7 @@ public:
     bool insert(SymbolInfo *s){
         int hash = hashFun(s->getName());
         return insertTo(hash, s);
-    }
-    
+    }    
     SymbolInfo* lookUpTable(string s, bool flag = true){
         int hash = hashFun(s);
         SymbolInfo* cur = hash_table[hash];
