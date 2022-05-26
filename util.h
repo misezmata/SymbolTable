@@ -1,7 +1,7 @@
 #include <string>
 using namespace std;
-unsigned long hash_sdbm(string s){
-    unsigned long hash = 0;
+uint32_t hash_sdbm(string s){
+    uint32_t hash = 0;
     int l = s.length();
     for(int i=0; i<l; i++){
         int c = s[i];

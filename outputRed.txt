@@ -1,0 +1,128 @@
+I a a
+
+Inserted in ScopeTable# 1 at position 6, 0
+
+I h h
+
+Inserted in ScopeTable# 1 at position 6, 1
+
+S
+
+New ScopeTable with id 1.1 created
+
+I h h
+
+Inserted in ScopeTable# 1.1 at position 6, 0
+
+I h h
+
+Found in ScopeTable# 1.1 at position 6, 0
+
+<h, h> already exists in current ScopeTable
+
+L h
+
+Found in ScopeTable# 1.1 at position 6, 0
+
+L a
+
+Found in ScopeTable# 1 at position 6, 0
+
+P A
+
+ScopeTable# 1.1
+0 -->   
+1 -->   
+2 -->   
+3 -->   
+4 -->   
+5 -->   
+6 -->   < h : h >   
+
+
+ScopeTable# 1
+0 -->   
+1 -->   
+2 -->   
+3 -->   
+4 -->   
+5 -->   
+6 -->   < a : a >   < h : h >   
+
+
+D h
+
+Found in ScopeTable# 1.1 at position 6, 0
+
+Deleted 6 0 from current ScopeTable
+
+D h
+
+h not found
+
+L h
+
+Found in ScopeTable# 1 at position 6, 1
+
+P A
+
+ScopeTable# 1.1
+0 -->   
+1 -->   
+2 -->   
+3 -->   
+4 -->   
+5 -->   
+6 -->   
+
+
+ScopeTable# 1
+0 -->   
+1 -->   
+2 -->   
+3 -->   
+4 -->   
+5 -->   
+6 -->   < a : a >   < h : h >   
+
+
+E
+
+ScopeTable with id 1.1 removed
+
+D h
+
+Found in ScopeTable# 1 at position 6, 1
+
+Deleted 6 1 from current ScopeTable
+
+P A
+
+ScopeTable# 1
+0 -->   
+1 -->   
+2 -->   
+3 -->   
+4 -->   
+5 -->   
+6 -->   < a : a >   
+
+
+E
+
+ScopeTable with id 1 removed
+
+I A A
+
+Inserted in ScopeTable# 1 at position 2, 0
+
+P A
+
+ScopeTable# 1
+0 -->   
+1 -->   
+2 -->   < A : A >   
+3 -->   
+4 -->   
+5 -->   
+6 -->   

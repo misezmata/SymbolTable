@@ -1,44 +1,47 @@
 #include "ScopeTable.h"
 class SymbolTable{
     int tableSize;
-    stack<ScopeTable*> tables;
     ScopeTable* currentTable;
-    int currentTableScopeSize = 1;
-    int globalScopeSize = 1;
 public:
     SymbolTable(int size){
-        currentTable = new ScopeTable(size);
-        tables.push(currentTable);
+        currentTable = new ScopeTable(size, 1);
         tableSize = size;
         currentTable->uniqueId = "1"; 
+    }
+    ~SymbolTable(){
+        delete currentTable;
     }
     void enterScope(){
         ScopeTable* newTable;
         if(currentTable == nullptr){
-            newTable = new ScopeTable(tableSize, globalScopeSize++);
-            newTable->uniqueId = to_string(globalScopeSize++);
+            newTable = new ScopeTable(tableSize, 1);
         }
         else{ 
-            newTable = new ScopeTable(tableSize, currentTable, currentTableScopeSize);
+            newTable = new ScopeTable(tableSize, currentTable);
         }
-        tables.push(newTable);
         currentTable = newTable;
-        cout<<"Created: "<<currentTable->uniqueId<<endl;
+        cout<<"New ScopeTable with id "<<currentTable->uniqueId<<" created"<<endl;
     }
     void exitScope(){
-        // tables.pop();
         if(currentTable == nullptr){
-            cout<<"no more to pop"<<endl;
+            cout<<"Not in a scope"<<endl;
             return;
         }
-        currentTableScopeSize++;
-        cout<<"deleting: "<<currentTable->uniqueId<<endl;
-        currentTableScopeSize = currentTable->scopeNo + 1;
+        cout<<"ScopeTable with id "<<currentTable->uniqueId<<" removed"<<endl;
+        ScopeTable* temp = currentTable;
+        
         currentTable = currentTable->parent;
+        delete temp;
     }
     bool insert(string name, string type){
         if(currentTable == nullptr) return false;
-        return currentTable->insert(new SymbolInfo(name, type));
+        SymbolInfo* si = new SymbolInfo(name, type);
+        if(currentTable->insert(si)){
+            return true;
+        }else{
+            delete si;
+            return false;
+        }
     }
     SymbolInfo* lookUp(string name){
         if(currentTable == nullptr) return nullptr;
@@ -48,22 +51,24 @@ public:
             if(si != nullptr) return si;
             cur = cur->parent;
             if(cur == nullptr) {
-                cout<<name<<" is not found!"<<endl;
+                cout<<"Not found"<<endl;
                 return nullptr;
             }
         }
+    }
+    bool remove(string name){
+        return currentTable->deleteNode(name);
     }
     void printCurrentScope(){
         if(currentTable == nullptr) return;
         currentTable->print();
     }
-    void printAllRec(ScopeTable* st){
-        if(st == nullptr) return;
-        printAllRec(st->parent);
-        st->print();
-    }
     void printAll(){
-        if(currentTable == nullptr) return;
-        printAllRec(currentTable);
+        ScopeTable* cur = currentTable;
+        while(cur != nullptr){
+            cur->print();
+            cur = cur->parent;
+            if(cur != nullptr)cout<<endl;
+        }
     }
 };

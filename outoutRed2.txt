@@ -1,0 +1,160 @@
+
+I a a
+
+Inserted in ScopeTable# 1 at position 6, 0
+
+I h h
+
+Inserted in ScopeTable# 1 at position 6, 1
+
+S
+
+Created: 1.1
+
+I h h
+
+Inserted in ScopeTable# 1.1 at position 6, 0
+
+I h h
+
+This word already exists1.1
+
+L h
+
+Found in ScopeTable# 1.1 at position 6, 0
+
+L a
+
+Found in ScopeTable# 1 at position 6, 0
+
+P A
+
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < a : a>< h : h>
+ScopeTable# 1.1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < h : h>
+
+D h
+
+Found in ScopeTable# 1.1 at position 6, 0
+Deleted h from: 1.1
+
+D h
+
+h not found in currentScope!
+
+L h
+
+Found in ScopeTable# 1 at position 6, 1
+
+P A
+
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < a : a>< h : h>
+ScopeTable# 1.1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> 
+
+E
+
+deleting: 1.1
+
+D h
+
+Found in ScopeTable# 1 at position 6, 1
+Deleted h from: 1
+
+P A
+
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < a : a>
+
+E
+
+Cannot delete scope: 1
+
+I A A
+
+Inserted in ScopeTable# 1 at position 2, 0
+
+P A
+
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> < A : A>
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < a : a>

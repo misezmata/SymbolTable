@@ -1,0 +1,65 @@
+
+Ia a
+
+Inserted in ScopeTable# 1 at position 6, 0
+
+Ih h
+
+Inserted in ScopeTable# 1 at position 6, 0
+
+S
+
+Created: 1.1
+
+Ih h
+
+Inserted in ScopeTable# 1.1 at position 6, 0
+
+Ih h
+
+This word already exists1.1
+
+Lh
+
+Found in ScopeTable# 1.1 at position 6, 0
+
+La
+
+Found in ScopeTable# 1 at position 6, 0
+
+P A
+
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < a : a>< h : h>
+ScopeTable# 1.1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < h : h>
+
+Dh
+
+Found in ScopeTable# 1.1 at position 6, 0

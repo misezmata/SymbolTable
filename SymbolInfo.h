@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 class SymbolInfo{
+    string name, type;
 public:
     SymbolInfo* next;
-    string name, type;
     SymbolInfo(string name, string type){
         this->name = name;
         this->type = type;
@@ -13,7 +13,7 @@ public:
         next = nullptr;
     }
     void print(){
-        cout<<"< "<<name<<" : "<<type<<">";
+        cout<<" < "<<name<<" : "<<type<<"> ";
     }
     void print2(){
         cout<<"{"<<endl;
@@ -23,5 +23,10 @@ public:
         cout<<"\tnext: ";
         if(next == nullptr) cout<<"null"<<endl;
         else cout<<next<<endl;
+    }
+    string getName(){return name;}
+    string getType(){return type;}
+    bool isSameName(SymbolInfo* si){
+        return si->name == this->name;
     }
 };

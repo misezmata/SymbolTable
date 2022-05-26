@@ -1,0 +1,126 @@
+Inserted in ScopeTable# 1 at position 6, 0
+Inserted in ScopeTable# 1 at position 0, 0
+Found in ScopeTable# 1 at position 6, 0
+j is not found!
+Inserted in ScopeTable# 1 at position 4, 0
+ScopeTable# 1
+
+0 --> < i : VAR>
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> < 5 : NUMBER>
+
+5 --> 
+
+6 --> < foo : FUNCTION>
+j not found in currentScope!
+Found in ScopeTable# 1 at position 0, 0
+Deleted i from: 1
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> < 5 : NUMBER>
+
+5 --> 
+
+6 --> < foo : FUNCTION>
+Created: 1.1
+Inserted in ScopeTable# 1.1 at position 6, 0
+Inserted in ScopeTable# 1.1 at position 1, 0
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> < 5 : NUMBER>
+
+5 --> 
+
+6 --> < foo : FUNCTION>
+ScopeTable# 1.1
+
+0 --> 
+
+1 --> < == : RELOP>
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < <= : RELOP>
+This word already exists1.1
+Inserted in ScopeTable# 1.1 at position 6, 0
+Found in ScopeTable# 1.1 at position 1, 0
+Deleted == from: 1.1
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> < 5 : NUMBER>
+
+5 --> 
+
+6 --> < foo : FUNCTION>
+ScopeTable# 1.1
+
+0 --> 
+
+1 --> 
+
+2 --> 
+
+3 --> 
+
+4 --> 
+
+5 --> 
+
+6 --> < <= : RELOP>< foo : FUNCTION>
+deleting: 1.1
+Inserted in ScopeTable# 1 at position 4, 0
+Inserted in ScopeTable# 1 at position 2, 0
+ScopeTable# 1
+
+0 --> 
+
+1 --> 
+
+2 --> < k : k>
+
+3 --> 
+
+4 --> < 5 : NUMBER>< t : t>
+
+5 --> 
+
+6 --> < foo : FUNCTION>
+Cannot delete scope: 1
+Cannot delete scope: 1
+Inserted in ScopeTable# 1 at position 2, 0
