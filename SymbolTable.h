@@ -32,6 +32,9 @@ public:
         
         currentTable = currentTable->parent;
         delete temp;
+        if(currentTable == nullptr){
+            currentTable = new ScopeTable(tableSize, 1);
+        }
     }
     bool insert(string name, string type){
         if(currentTable == nullptr) return false;
