@@ -1,4 +1,4 @@
-#include "ScopeTable.h"
+#include "1805090_ScopeTable.h"
 class SymbolTable{
     int tableSize;
     ScopeTable* currentTable;

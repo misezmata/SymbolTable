@@ -1,5 +1,5 @@
-#include "SymbolInfo.h"
-#include "util.h"
+#include "1805090_SymbolInfo.h"
+#include "1805090_util.h"
 class ScopeTable{
     int noOfChildren;
     int size;
