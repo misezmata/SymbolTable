@@ -39,7 +39,7 @@ class ScopeTable{
             hash_table[hash] = s->next;
             cout<<"Deleted Entry "<<hash<<", "<<0<<" from current ScopeTable"<<endl;
             delete s;
-            hash_table[hash] = nullptr;
+            //hash_table[hash] = nullptr;
             return true;
         }
         SymbolInfo* parent = hash_table[hash];
